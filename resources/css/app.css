@@ -45,6 +45,7 @@
     *{
         font-family: dana, IRANYekan, morabba, sans-serif;
         transition: all 300ms;
+        scroll-behavior: smooth;
     }
 
     html.dark #main{

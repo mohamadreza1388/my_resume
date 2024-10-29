@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Skill;
+use App\Models\WorkSample;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -17,6 +18,10 @@ class IndexController extends Controller
             return Skill::all();
         });
 
-        return view('index', compact('skills'));
+        $work_samples = Cache::remember('work_samples', 24 * 60, function () {
+            return WorkSample::all();
+        });
+
+        return view('index', compact('skills', 'work_samples'));
     }
 }

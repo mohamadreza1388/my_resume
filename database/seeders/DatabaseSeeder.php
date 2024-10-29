@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Information;
 use App\Models\Setting;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Skill;
+use App\Models\WorkSample;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -121,5 +123,23 @@ class DatabaseSeeder extends Seeder
             'title' => 'MVC',
             'value' => '90',
         ]);
+
+        $work_sample = WorkSample::create([
+            'title' => 'سافت اپ',
+            'description' => 'سایت دانلود نرم افزار سافت اپ',
+            'thumbnail' => 'assets/images/Work-Samples/softapp.png',
+            'url' => 'https://softapp.ir',
+        ]);
+
+        Information::create([
+            'title' => 'Html',
+            'work_sample_id' => $work_sample->id,
+        ]);
+
+        Information::create([
+            'title' => 'Css',
+            'work_sample_id' => $work_sample->id,
+        ]);
+
     }
 }

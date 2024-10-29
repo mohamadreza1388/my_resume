@@ -100,42 +100,50 @@
             </div>
         </div>
     </section>
-    <section id="work_samples" class="relative pb-10">
+    <section id="work-samples" class="relative pb-10">
         <div class="container mx-auto pt-16">
             <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit ">
                 نمونه کارها</h1>
             <div class="bg-white shadow-lg w-full p-9 mt-10 rounded-[20px] grid grid-cols-4 gap-6">
-                <a href="" class="work_sample bg-gray-100 p-4 py-6 rounded-[20px] w-full relative inline-block">
-                    <img src="{{ asset("assets/images/Work-Samples/softapp.png") }}" alt="" class="h-[80px] mx-auto">
-                    <p class="text-center mt-4">سایت دانلود نرم افزار سافت اپ</p>
-                    <button class="code bg-green-500 rounded-[8px] z-20 absolute top-4 right-4 py-1 px-1.5">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
-                        </svg>
-                    </button>
-                    <div class="information w-full max-w-[450px] rounded-[20px] z-[52] fixed min-h-[200px] top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-white p-4 hidden opacity-0">
-                        <div class="flex justify-between items-center">
-                            <h3 class="font-[morabba] text-[22px]">سافت اپ</h3>
-                            <svg viewBox="0 0 24 24" fill="none" class="w-5 close" xmlns="http://www.w3.org/2000/svg">
-                                <g stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <g id="Menu / Close_LG">
-                                        <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                </g>
+                @foreach($work_samples as $work_sample)
+                    <a href="{{ $work_sample->url }}" class="work_sample bg-gray-100 p-4 py-6 rounded-[20px] w-full relative inline-block">
+                        <img src="{{ asset($work_sample->thumbnail) }}" alt="" class="h-[80px] mx-auto">
+                        <p class="text-center mt-4">{{ $work_sample->description }}</p>
+                        <button class="code bg-green-500 rounded-[8px] z-20 absolute top-4 right-4 py-1 px-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                 stroke="currentColor" class="w-5 h-5 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
                             </svg>
+                        </button>
+                        <div
+                            class="information w-full max-w-[450px] rounded-[20px] z-[52] fixed min-h-[200px] top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-white p-4 hidden opacity-0">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-[morabba] text-[22px]">{{ $work_sample->title }}</h3>
+                                <svg viewBox="0 0 24 24" fill="none" class="w-5 close" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g id="Menu / Close_LG">
+                                            <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001"
+                                                  stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <hr noshade class="opacity-50 border-0 outline-0 h-[1px] w-full bg-gray-400 my-3">
+                            <sapn class="text-gray-700">توسعه داده شده با:</sapn>
+                            <ul>
+                                @foreach($work_sample->informations as $information)
+                                    <li class="before:inline-block before:w-[8px] before:h-[8px] before:ml-2 before:rounded-full before:bg-green-500">
+                                        {{ $information->title }}
+                                    </li>
+                                @endforeach
+                            </ul>
                         </div>
-                        <hr noshade class="opacity-50 border-0 outline-0 h-[1px] w-full bg-gray-400 my-3">
-                        <sapn class="text-gray-700">توسعه داده شده با:</sapn>
-                        <ul>
-                            <li class="before:inline-block before:w-[8px] before:h-[8px] before:ml-2 before:rounded-full before:bg-green-500">Html</li>
-                            <li class="before:inline-block before:w-[8px] before:h-[8px] before:ml-2 before:rounded-full before:bg-green-500">Html</li>
-                            <li class="before:inline-block before:w-[8px] before:h-[8px] before:ml-2 before:rounded-full before:bg-green-500">Html</li>
-                            <li class="before:inline-block before:w-[8px] before:h-[8px] before:ml-2 before:rounded-full before:bg-green-500">Html</li>
-                        </ul>
-                    </div>
-                </a>
+                    </a>
+                @endforeach
             </div>
         </div>
         <svg class="absolute bottom-0 -z-[1] w-full right-0 fill-green-500 h-[60%]" preserveAspectRatio="none"
