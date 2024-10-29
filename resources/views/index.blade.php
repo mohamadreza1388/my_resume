@@ -69,22 +69,22 @@
     </main>
     <section id="about_us">
         <div class="container mx-auto pt-16">
-            <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit ">
+            <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit dark:text-white">
                 درباره من</h1>
             <div
-                class="w-full bg-white rounded-[20px] text-lg p-9 mt-10 leading-9 shadow-lg">{!! setting("about") !!}</div>
+                class="w-full bg-white dark:bg-[#3F3F46] dark:text-white rounded-[20px] text-lg p-9 mt-10 leading-9 shadow-lg">{!! setting("about") !!}</div>
         </div>
     </section>
     <section id="skills" class="relative pb-10">
         <div class="container mx-auto pt-16">
-            <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit ">
+            <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit dark:text-white">
                 مهارت ها</h1>
-            <div class="bg-white shadow-lg w-full p-9 mt-10 rounded-[20px] grid grid-cols-3 gap-16">
+            <div class="bg-white dark:bg-[#3F3F46] shadow-lg w-full p-9 mt-10 rounded-[20px] grid grid-cols-3 gap-16">
                 @foreach($skills as $skill)
                     <div>
                         <div class="flex justify-between">
-                            <span>{{ $skill->title }}</span>
-                            <span>{{ $skill->value }}%</span>
+                            <span class="dark:text-white text-black">{{ $skill->title }}</span>
+                            <span class="dark:text-white text-black">{{ $skill->value }}%</span>
                         </div>
                         <div class="progress-bar bg-gray-200 dark:bg-zinc-500 rounded-full">
                             <div
@@ -102,13 +102,14 @@
     </section>
     <section id="work-samples" class="relative pb-10">
         <div class="container mx-auto pt-16">
-            <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit ">
+            <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit dark:text-white">
                 نمونه کارها</h1>
-            <div class="bg-white shadow-lg w-full p-9 mt-10 rounded-[20px] grid grid-cols-4 gap-6">
+            <div class="bg-white dark:bg-[#3F3F46] shadow-lg w-full p-9 mt-10 rounded-[20px] grid grid-cols-4 gap-6">
                 @foreach($work_samples as $work_sample)
-                    <a href="{{ $work_sample->url }}" class="work_sample bg-gray-100 p-4 py-6 rounded-[20px] w-full relative inline-block">
+                    <a href="{{ $work_sample->url }}"
+                       class="work_sample dark:bg-[#2C2C30] bg-gray-100 p-4 py-6 rounded-[20px] w-full relative inline-block">
                         <img src="{{ asset($work_sample->thumbnail) }}" alt="" class="h-[80px] mx-auto">
-                        <p class="text-center mt-4">{{ $work_sample->description }}</p>
+                        <p class="text-center mt-4 dark:text-white">{{ $work_sample->description }}</p>
                         <button class="code bg-green-500 rounded-[8px] z-20 absolute top-4 right-4 py-1 px-1.5">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                                  stroke="currentColor" class="w-5 h-5 text-white">
@@ -117,10 +118,11 @@
                             </svg>
                         </button>
                         <div
-                            class="information w-full max-w-[450px] rounded-[20px] z-[52] fixed min-h-[200px] top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-white p-4 hidden opacity-0">
+                            class="information w-full max-w-[450px] rounded-[20px] z-[52] fixed min-h-[200px] top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-white dark:bg-[#2C2C30] p-4 hidden opacity-0">
                             <div class="flex justify-between items-center">
-                                <h3 class="font-[morabba] text-[22px]">{{ $work_sample->title }}</h3>
-                                <svg viewBox="0 0 24 24" fill="none" class="w-5 close" xmlns="http://www.w3.org/2000/svg">
+                                <h3 class="font-[morabba] text-[22px] dark:text-white">{{ $work_sample->title }}</h3>
+                                <svg viewBox="0 0 24 24" fill="none" class="w-5 dark:invert close"
+                                     xmlns="http://www.w3.org/2000/svg">
                                     <g stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
@@ -133,10 +135,10 @@
                                 </svg>
                             </div>
                             <hr noshade class="opacity-50 border-0 outline-0 h-[1px] w-full bg-gray-400 my-3">
-                            <sapn class="text-gray-700">توسعه داده شده با:</sapn>
-                            <ul>
+                            <sapn class="text-gray-700 dark:text-white">توسعه داده شده با:</sapn>
+                            <ul class="mt-2">
                                 @foreach($work_sample->informations as $information)
-                                    <li class="before:inline-block before:w-[8px] before:h-[8px] before:ml-2 before:rounded-full before:bg-green-500">
+                                    <li class="before:inline-block before:w-[8px] before:h-[8px] before:ml-2 dark:text-white before:rounded-full before:bg-green-500">
                                         {{ $information->title }}
                                     </li>
                                 @endforeach
