@@ -54,72 +54,72 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Skill::create([
-            "title" => "HTML",
-            "value" => "90"
+            'title' => 'HTML',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "CSS",
-            "value" => "90"
+            'title' => 'CSS',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "JAVASCRIPT",
-            "value" => "90"
+            'title' => 'JAVASCRIPT',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "JQUERY",
-            "value" => "90"
+            'title' => 'JQUERY',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "REACT",
-            "value" => "90"
+            'title' => 'REACT',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "TAILWIND",
-            "value" => "90"
+            'title' => 'TAILWIND',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "BOOTSTRAP",
-            "value" => "90"
+            'title' => 'BOOTSTRAP',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "SCSS",
-            "value" => "90"
+            'title' => 'SCSS',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "PUG",
-            "value" => "90"
+            'title' => 'PUG',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "NPM",
-            "value" => "90"
+            'title' => 'NPM',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "VITE",
-            "value" => "90"
+            'title' => 'VITE',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "COMPOSER",
-            "value" => "90"
+            'title' => 'COMPOSER',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "PHP",
-            "value" => "90"
+            'title' => 'PHP',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "LARAVEL",
-            "value" => "90"
+            'title' => 'LARAVEL',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "GIT AND GITHUB",
-            "value" => "90"
+            'title' => 'GIT AND GITHUB',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "RESTFUL API",
-            "value" => "90"
+            'title' => 'RESTFUL API',
+            'value' => '90',
         ]);
         Skill::create([
-            "title" => "MVC",
-            "value" => "90"
+            'title' => 'MVC',
+            'value' => '90',
         ]);
     }
 }

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->integer("value");
+            $table->integer('value');
             $table->timestamps();
         });
     }
