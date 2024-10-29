@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Setting;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Skill;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -44,6 +45,81 @@ class DatabaseSeeder extends Seeder
         Setting::create([
             'key' => 'main_picture',
             'value' => 'assets/images/Header/profile.jpg',
+        ]);
+        Setting::create([
+            'key' => 'about',
+            'value' => 'هادی حیدری آذر هستم برنامه نویس و توسعه دهنده فرانت اند.
+                <br>
+                برنامه نویسی رو از اولین روز سال ۱۴۰۱ شروع کردم و از همون اول خودم رو به چالش میکشیدم تا بتونم پیشرفت کنم و همیشه کاری رو که شروع میکنم رو به بهترین نحوه تموم میکنم و دقت زیادی روی جزئیات کارم دارم و همیشه با کنجکاوی و بروز بودن و یادگیری چیز های بیشتر در دنیای برنامه نویسی سعی میکنم تا سطح خودم رو بالا و بالاتر ببرم و پیشرفت کنم.',
+        ]);
+
+        Skill::create([
+            "title" => "HTML",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "CSS",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "JAVASCRIPT",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "JQUERY",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "REACT",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "TAILWIND",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "BOOTSTRAP",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "SCSS",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "PUG",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "NPM",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "VITE",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "COMPOSER",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "PHP",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "LARAVEL",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "GIT AND GITHUB",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "RESTFUL API",
+            "value" => "90"
+        ]);
+        Skill::create([
+            "title" => "MVC",
+            "value" => "90"
         ]);
     }
 }

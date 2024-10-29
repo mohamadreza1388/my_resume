@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Setting;
+use App\Models\Skill;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class IndexController extends Controller
 {
@@ -11,6 +14,10 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('index');
+        $skills = Cache::remember("skills", 24 * 60, function () {
+            return Skill::all();
+        });
+
+        return view('index',compact('skills'));
     }
 }

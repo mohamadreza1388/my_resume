@@ -67,4 +67,37 @@
             <p class="-mt-10 dark:text-white">اسکرول کنید</p>
         </div>
     </main>
+    <section id="about_us">
+        <div class="container mx-auto pt-16">
+            <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit ">
+                درباره من</h1>
+            <div
+                class="w-full bg-white rounded-[20px] text-lg p-9 mt-10 leading-9 shadow-lg">{!! setting("about") !!}</div>
+        </div>
+    </section>
+    <section id="skills" class="relative pb-10">
+        <div class="container mx-auto pt-16">
+            <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit ">
+                مهارت ها</h1>
+            <div class="bg-white shadow-lg w-full p-9 mt-10 rounded-[20px] grid grid-cols-3 gap-16">
+                @foreach($skills as $skill)
+                    <div>
+                        <div class="flex justify-between">
+                            <span>{{ $skill->title }}</span>
+                            <span>{{ $skill->value }}%</span>
+                        </div>
+                        <div class="progress-bar bg-gray-200 dark:bg-zinc-500 rounded-full">
+                            <div
+                                class="bar bg-green-500 w-[{{ $skill->value }}%] mt-1.5 h-8 flex justify-between items-center rounded-full"></div>
+                        </div>
+                    </div>
+                @endforeach
+                <svg class="absolute bottom-0 -z-[1] w-full right-0 fill-green-500" preserveAspectRatio="none"
+                     viewBox="0 0 500 150">
+                    <path d="M-23.42,101.16 C145.87,-46.86 279.62,189.97 523.42,9.39 L500.00,150.00 L0.00,150.00 Z"
+                          style="stroke: none;"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
 @endsection
