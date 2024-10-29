@@ -1,4 +1,4 @@
-<div class="header_wrapper fixed top-6 right-0 w-full">
+<div class="header_wrapper fixed top-6 right-0 w-full z-50">
     <div class="container mx-auto">
         <header class="header w-full backdrop-blur border border-neutral-200/50 bg-gray-400/60 h-[90px] rounded-[20px] flex px-10">
             <div class="grow flex justify-start">

@@ -4,11 +4,11 @@
     <main id="main" class="w-full h-[607px] bg-no-repeat bg-cover pt-20">
         <div class="container flex justify-center mx-auto h-full">
             <div class="basis-1/2 flex justify-center items-start flex-col">
-                <h1 class="font-[morabba] font-bold text-[60px] dark:text-white">محمدرضا نصراله زاده</h1>
-                <p class="text-[17px] mt-8 dark:text-white">برنامه نویس و توسعه دهنده فرانت اند و بک اند</p>
+                <h1 class="font-[morabba] font-bold text-[60px] dark:text-white">{{ setting("name") }}</h1>
+                <p class="text-[17px] mt-8 dark:text-white">{{ setting("job") }}</p>
                 <div class="flex justify-start items-center gap-3 mt-8">
                     {{--Resume Download--}}
-                    <a href="#"
+                    <a href="{{ setting("resume") }}"
                        class="bg-green-500 w-40 flex justify-center items-center p-3 rounded-full hover:shadow-green-500 hover:shadow-big text-white"
                        download="mohamadrezanz">
                         دانلود رزومه
@@ -19,7 +19,7 @@
                         </svg>
                     </a>
                     {{--Links--}}
-                    <a href="" target="_blank"
+                    <a href="{{ setting("email") }}" target="_blank"
                        class="bg-gray-500 hover:bg-green-500 group rounded-full relative hover:shadow-green-500 hover:shadow-big">
                         <div class="bg-white rounded-full m-2.5 w-8">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -30,7 +30,7 @@
                             </svg>
                         </div>
                     </a>
-                    <a href="" target="_blank"
+                    <a href="{{ setting("github") }}" target="_blank"
                        class="bg-gray-500 hover:bg-black rounded-full p-1 relative group hover:shadow-black hover:shadow-big">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-11 fill-white" viewBox="0 0 72 72">
                             <path
@@ -38,7 +38,7 @@
                             </path>
                         </svg>
                     </a>
-                    <a href="" target="_blank"
+                    <a href="{{ setting("telegram") }}" target="_blank"
                        class="bg-gray-500 hover:bg-sky-600 rounded-full p-1 relative group hover:shadow-sky-600 hover:shadow-big">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-11 fill-white">
                             <path
@@ -46,7 +46,7 @@
                             </path>
                         </svg>
                     </a>
-                    <a href="" target="_blank"
+                    <a href="{{ setting("instagram") }}" target="_blank"
                        class="bg-gray-500 hover:bg-rose-600 rounded-full p-2 relative group hover:shadow-rose-600 hover:shadow-big">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-9 fill-white" viewBox="0 0 64 64">
                             <path
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="basis-1/2 flex justify-center items-center">
-                <img src="{{ asset("assets/images/Header/profile.jpg") }}" alt=""
+                <img src="{{ asset(setting("main_picture")) }}" alt="my picture"
                      class="w-[360px] h-[360px] object-cover rounded-[130px] animate-profile" loading="lazy">
             </div>
         </div>
