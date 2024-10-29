@@ -11,6 +11,8 @@
 
 @yield("content")
 
+<div class="overlay fixed top-0 right-0 w-full h-[100vh] bg-black/40 z-[51] hidden opacity-0"></div>
+
 @vite("resources/js/app.js")
 </body>
 </html>
