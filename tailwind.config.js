@@ -13,7 +13,8 @@ export default {
     theme: {
         extend:{
             boxShadow: {
-                'big': '0px 0px 50px 1px'
+                'big': '0px 0px 50px 1px',
+                's': '0px 0px 35px 1px'
             },
             animation: {
                 profile: "profile 4s linear infinite",

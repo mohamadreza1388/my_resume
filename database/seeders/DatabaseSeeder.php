@@ -6,6 +6,7 @@ use App\Models\Information;
 use App\Models\Setting;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Skill;
+use App\Models\User;
 use App\Models\WorkSample;
 use Illuminate\Database\Seeder;
 
@@ -16,6 +17,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::create([
+            "name" => "محمدرضا نصراله زاده",
+            "email" => "mohamadreza1388.org@gmail.com",
+            "password" => "1A2A3b4b"
+        ]);
+
         Setting::create([
             'key' => 'name',
             'value' => 'محمدرضا نصراله زاده',

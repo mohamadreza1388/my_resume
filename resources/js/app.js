@@ -8,7 +8,7 @@ Alpine.start();
 
 document.addEventListener("DOMContentLoaded", () => {
     const $ = document;
-    const elm_darkModeBtn = $.querySelector(".change_theme");
+    const elm_darkModeBtn = $?.querySelector(".change_theme");
     const elm_code_buttons = $.querySelectorAll("button.code")
     const elm_work_samples = $.querySelectorAll(".work_sample")
     const elm_overlay = $.querySelector(".overlay")
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("load", () => {
     });
 
-    elm_darkModeBtn.addEventListener("click", () => {
+    elm_darkModeBtn?.addEventListener("click", () => {
         toggleDarkMode();
     });
 
