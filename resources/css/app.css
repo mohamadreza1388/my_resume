@@ -41,9 +41,17 @@
         src: url("../../public/assets/fonts/Morabba/Morabba-Bold.woff2")
         format("woff2");
     }
-}
 
-*{
-    font-family: dana, IRANYekan, morabba, sans-serif;
-    transition: all 300ms;
+    *{
+        font-family: dana, IRANYekan, morabba, sans-serif;
+        transition: all 300ms;
+    }
+
+    html.dark #main{
+        background-image: url("../../public/assets/images/Header/headerBackgroundPicture.webp");
+    }
+
+    html #main{
+        background-image: url("../../public/assets/images/Header/background2_11zon.jpg");
+    }
 }

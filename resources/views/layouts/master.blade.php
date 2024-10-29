@@ -6,7 +6,7 @@
     <title>محمد رضا نصراله زاده</title>
     @vite("resources/css/app.css")
 </head>
-<body class="bg-[#27272A]">
+<body class="dark:bg-[#27272A] bg-[#F3F4F6]">
 @include("layouts.partials.header")
 
 @yield("content")

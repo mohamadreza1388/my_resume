@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Events
     window.addEventListener("load", () => {
-
     });
 
     elm_darkModeBtn.addEventListener("click", () => {
