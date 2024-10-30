@@ -11,7 +11,7 @@ function setting($key, $cache = false)
         return Cache::remember($cacheKey, 24 * 60 * 60, function () use ($key) {
             return Setting::where('key', $key)->firstOrFail()?->value;
         });
-    }else {
+    } else {
         return Setting::where('key', $key)->firstOrFail()?->value;
     }
 }

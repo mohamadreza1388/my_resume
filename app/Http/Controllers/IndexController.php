@@ -24,13 +24,13 @@ class IndexController extends Controller
             return WorkSample::all();
         });
 
-        $response = Http::get("https://api.github.com/users/mohamadreza1388");
+        $response = Http::get('https://api.github.com/users/mohamadreza1388');
         global $avatar;
         if ($response->successful()) {
-            $avatar = $response->json("avatar_url");
+            $avatar = $response->json('avatar_url');
         }
-        Setting::where("key", "main_picture")->first()->update([
-           "value" => $avatar
+        Setting::where('key', 'main_picture')->first()->update([
+            'value' => $avatar,
         ]);
 
         return view('index', compact('skills', 'work_samples'));
