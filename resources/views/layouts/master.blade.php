@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>محمد رضا نصراله زاده</title>
     @vite("resources/css/app.css")
+    @yield("style")
 </head>
 <body class="dark:bg-[#27272A] bg-[#F3F4F6]">
 @include("layouts.partials.header")

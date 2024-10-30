@@ -16,6 +16,9 @@ export default {
                 'big': '0px 0px 50px 1px',
                 's': '0px 0px 35px 1px'
             },
+            height:{
+                "admin": "calc(100vh - 138px)"
+            },
             animation: {
                 profile: "profile 4s linear infinite",
             },

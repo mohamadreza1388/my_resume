@@ -88,7 +88,7 @@
                         </div>
                         <div class="progress-bar bg-gray-200 dark:bg-zinc-500 rounded-full">
                             <div
-                                class="bar bg-green-500 w-[{{ $skill->value }}%] mt-1.5 h-8 flex justify-between items-center rounded-full"></div>
+                                class="bar bg-green-500 mt-1.5 h-8 flex justify-between items-center rounded-full" style="width: {{$skill->value}}%"></div>
                         </div>
                     </div>
                 @endforeach
