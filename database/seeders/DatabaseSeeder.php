@@ -33,23 +33,23 @@ class DatabaseSeeder extends Seeder
         ]);
         Setting::create([
             'key' => 'resume',
-            'value' => '#',
+            'value' => 'assets/files/resume.pdf',
         ]);
         Setting::create([
             'key' => 'github',
-            'value' => '#',
+            'value' => 'https://github.com/mohamadreza1388',
         ]);
         Setting::create([
             'key' => 'email',
-            'value' => '#',
+            'value' => 'mailto:mohamadreza1388.org@gmail.com',
         ]);
         Setting::create([
             'key' => 'instagram',
-            'value' => '#',
+            'value' => 'https://www.instagram.com/mohamadrezanz.ir',
         ]);
         Setting::create([
             'key' => 'telegram',
-            'value' => '#',
+            'value' => 'https://t.me/mohamadreza_nasrz',
         ]);
         Setting::create([
             'key' => 'main_picture',
@@ -57,9 +57,9 @@ class DatabaseSeeder extends Seeder
         ]);
         Setting::create([
             'key' => 'about',
-            'value' => 'هادی حیدری آذر هستم برنامه نویس و توسعه دهنده فرانت اند.
+            'value' => 'محمد رضا نصراله زاده هستم برنامه نویس فرانت اند و بک اند.
                 <br>
-                برنامه نویسی رو از اولین روز سال ۱۴۰۱ شروع کردم و از همون اول خودم رو به چالش میکشیدم تا بتونم پیشرفت کنم و همیشه کاری رو که شروع میکنم رو به بهترین نحوه تموم میکنم و دقت زیادی روی جزئیات کارم دارم و همیشه با کنجکاوی و بروز بودن و یادگیری چیز های بیشتر در دنیای برنامه نویسی سعی میکنم تا سطح خودم رو بالا و بالاتر ببرم و پیشرفت کنم.',
+                برای اینکه بیشتر با من اشنا بشوید میتوانید از طریق لینک های بالا با من ارتباط گرفته یا رزومه کاری من را مشاهده کنید. علاقه مند به کار های تیمی هستم و جزو افرادی هستم که کارکردن حضوری و گروهی را دوست دارم.همچنین میتوانید با مهارت های من در بخش زیر اشنا شوید.',
         ]);
 
         Skill::create([
@@ -72,19 +72,19 @@ class DatabaseSeeder extends Seeder
         ]);
         Skill::create([
             'title' => 'JAVASCRIPT',
-            'value' => '90',
+            'value' => '80',
         ]);
         Skill::create([
             'title' => 'JQUERY',
-            'value' => '90',
+            'value' => '85',
         ]);
         Skill::create([
             'title' => 'REACT',
-            'value' => '90',
+            'value' => '30',
         ]);
         Skill::create([
             'title' => 'TAILWIND',
-            'value' => '90',
+            'value' => '85',
         ]);
         Skill::create([
             'title' => 'BOOTSTRAP',
@@ -92,43 +92,43 @@ class DatabaseSeeder extends Seeder
         ]);
         Skill::create([
             'title' => 'SCSS',
-            'value' => '90',
+            'value' => '70',
         ]);
         Skill::create([
             'title' => 'PUG',
-            'value' => '90',
+            'value' => '80',
         ]);
         Skill::create([
             'title' => 'NPM',
-            'value' => '90',
+            'value' => '85',
         ]);
         Skill::create([
             'title' => 'VITE',
-            'value' => '90',
+            'value' => '70',
         ]);
         Skill::create([
             'title' => 'COMPOSER',
-            'value' => '90',
+            'value' => '70',
         ]);
         Skill::create([
             'title' => 'PHP',
-            'value' => '90',
+            'value' => '70',
         ]);
         Skill::create([
             'title' => 'LARAVEL',
-            'value' => '90',
+            'value' => '80',
         ]);
         Skill::create([
             'title' => 'GIT AND GITHUB',
-            'value' => '90',
+            'value' => '85',
         ]);
         Skill::create([
             'title' => 'RESTFUL API',
-            'value' => '90',
+            'value' => '95',
         ]);
         Skill::create([
             'title' => 'MVC',
-            'value' => '90',
+            'value' => '95',
         ]);
 
         $work_sample = WorkSample::create([
@@ -137,16 +137,5 @@ class DatabaseSeeder extends Seeder
             'thumbnail' => 'assets/images/Work-Samples/softapp.png',
             'url' => 'https://softapp.ir',
         ]);
-
-        Information::create([
-            'title' => 'Html',
-            'work_sample_id' => $work_sample->id,
-        ]);
-
-        Information::create([
-            'title' => 'Css',
-            'work_sample_id' => $work_sample->id,
-        ]);
-
     }
 }
