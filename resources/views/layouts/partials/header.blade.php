@@ -1,6 +1,6 @@
 <div class="header_wrapper fixed top-6 right-0 w-full z-50">
-    <div class="container mx-auto">
-        <header class="header w-full backdrop-blur border border-neutral-200/50 bg-gray-400/60 h-[90px] rounded-[20px] flex px-10">
+    <div class="container mx-auto max-w-[95%]">
+        <header class="header w-full backdrop-blur border border-neutral-200/50 bg-gray-400/60 h-[90px] rounded-[20px] flex px-8 sm:px-10">
             <div class="grow flex justify-start">
                 @auth()
                     <form method="get" action="{{ route("admin.setting") }}" class="flex items-center">
@@ -25,15 +25,15 @@
                 @endauth
             </div>
             <div class="grow-[1.8] flex justify-center items-center">
-                <ul class="flex justify-center items-center gap-10">
+                <ul class="flex justify-center items-center sm:gap-10 gap-6">
                     <li>
-                        <a href="#main" class="text-white text-[20px] before:inline-block before:absolute relative before:w-full before:h-[3px] before:bottom-[-4px] before:bg-transparent hover:before:bg-green-500 before:transition-all before:duration-200 before:rounded">درباره من</a>
+                        <a href="#main" class="sm:inline-block hidden text-white text-[17px] sm:text-[20px] before:inline-block before:absolute relative before:w-full before:h-[3px] before:bottom-[-4px] before:bg-transparent hover:before:bg-green-500 before:transition-all before:duration-200 before:rounded">درباره من</a>
                     </li>
                     <li>
-                        <a href="#skills" class="text-white text-[20px] before:inline-block before:absolute relative before:w-full before:h-[3px] before:bottom-[-4px] before:bg-transparent hover:before:bg-green-500 before:transition-all before:duration-200 before:rounded">مهارت ها</a>
+                        <a href="#skills" class="text-white text-[17px] sm:text-[20px] before:inline-block before:absolute relative before:w-full before:h-[3px] before:bottom-[-4px] before:bg-transparent hover:before:bg-green-500 before:transition-all before:duration-200 before:rounded">مهارت ها</a>
                     </li>
                     <li>
-                        <a href="#work-samples" class="text-white text-[20px] before:inline-block before:absolute relative before:w-full before:h-[3px] before:bottom-[-4px] before:bg-transparent hover:before:bg-green-500 before:transition-all before:duration-200 before:rounded">نمونه کارها</a>
+                        <a href="#work-samples" class="text-white text-[17px] sm:text-[20px] before:inline-block before:absolute relative before:w-full before:h-[3px] before:bottom-[-4px] before:bg-transparent hover:before:bg-green-500 before:transition-all before:duration-200 before:rounded">نمونه کارها</a>
                     </li>
                 </ul>
             </div>
