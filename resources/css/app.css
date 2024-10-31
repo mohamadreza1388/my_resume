@@ -2,57 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
     /*Dana Font*/
     @font-face {
         font-family: "dana";
         font-weight: normal;
-        src: url("../../public/assets/fonts/Dana/DanaFaNum-Regular.woff2")
-        format("woff2");
+        src: url("../../public/assets/fonts/Dana/DanaFaNum-Regular.woff2") format("woff2");
     }
     @font-face {
         font-family: "dana";
         font-weight: 500;
-        src: url("../../public/assets/fonts/Dana/DanaFaNum-Medium.woff2")
-        format("woff2");
+        src: url("../../public/assets/fonts/Dana/DanaFaNum-Medium.woff2") format("woff2");
     }
     @font-face {
         font-family: "dana";
         font-weight: bold;
-        src: url("../../public/assets/fonts/Dana/DanaFaNum-DemiBold.woff2")
-        format("woff2");
+        src: url("../../public/assets/fonts/Dana/DanaFaNum-DemiBold.woff2") format("woff2");
     }
     /*Morabba Font*/
     @font-face {
         font-family: "morabba";
         font-weight: 300;
-        src: url("../../public/assets/fonts/Morabba/Morabba-Light.woff2")
-        format("woff2");
+        src: url("../../public/assets/fonts/Morabba/Morabba-Light.woff2") format("woff2");
     }
     @font-face {
         font-family: "morabba";
         font-weight: normal;
-        src: url("../../public/assets/fonts/Morabba/Morabba-Medium.woff2")
-        format("woff2");
+        src: url("../../public/assets/fonts/Morabba/Morabba-Medium.woff2") format("woff2");
     }
     @font-face {
         font-family: "morabba";
         font-weight: bold;
-        src: url("../../public/assets/fonts/Morabba/Morabba-Bold.woff2")
-        format("woff2");
+        src: url("../../public/assets/fonts/Morabba/Morabba-Bold.woff2") format("woff2");
     }
 
-    *{
+    * {
         font-family: dana, IRANYekan, morabba, sans-serif;
         transition: all 300ms;
         scroll-behavior: smooth;
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
     }
 
-    html.dark #main{
+    html.dark #main {
         background-image: url("../../public/assets/images/Header/headerBackgroundPicture.webp");
     }
 
-    html #main{
+    html #main {
         background-image: url("../../public/assets/images/Header/background2_11zon.jpg");
     }
 }
