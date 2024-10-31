@@ -58,10 +58,12 @@
             </div>
             <div class="sm:basis-1/2 basis-full flex justify-center items-center">
                 <img src="{{ asset(setting("main_picture")) }}" alt="my picture"
-                     class="lg:w-[360px] lg:h-[360px] w-[280px] h-[280px] object-cover rounded-[70px] sm:rounded-[100px] lg:rounded-[130px] animate-profile" loading="lazy">
+                     class="lg:w-[360px] lg:h-[360px] w-[280px] h-[280px] object-cover rounded-[70px] sm:rounded-[100px] lg:rounded-[130px] animate-profile"
+                     loading="lazy">
             </div>
         </div>
-        <div class="w-full transform sm:-translate-y-[150%] sm:pb-0 pb-4 sm:my-0 my-4 flex-col gap-4 justify-center items-center flex">
+        <div
+            class="w-full transform sm:-translate-y-[150%] sm:pb-0 pb-4 sm:my-0 my-4 flex-col gap-4 justify-center items-center flex">
             <img src="{{ asset("assets/images/Header/mouseDown.png") }}" alt=""
                  class="w-[100px] invert dark:invert-0 animate-bounce">
             <p class="-mt-10 dark:text-white">اسکرول کنید</p>
@@ -79,7 +81,8 @@
         <div class="container mx-auto pt-16 max-w-[95%]">
             <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit dark:text-white">
                 مهارت ها</h1>
-            <div class="bg-white dark:bg-[#3F3F46] shadow-lg w-full p-9 mt-10 rounded-[20px] grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-16">
+            <div
+                class="bg-white dark:bg-[#3F3F46] shadow-lg w-full p-9 mt-10 rounded-[20px] grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-16">
                 @foreach($skills as $skill)
                     <div>
                         <div class="flex justify-between">
@@ -88,7 +91,8 @@
                         </div>
                         <div class="progress-bar bg-gray-200 dark:bg-zinc-500 rounded-full">
                             <div
-                                class="bar bg-green-500 mt-1.5 h-8 flex justify-between items-center rounded-full" style="width: {{$skill->value}}%"></div>
+                                class="bar bg-green-500 mt-1.5 h-8 flex justify-between items-center rounded-full"
+                                style="width: {{$skill->value}}%"></div>
                         </div>
                     </div>
                 @endforeach
@@ -104,13 +108,14 @@
         <div class="container mx-auto pt-16 max-w-[95%]">
             <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit dark:text-white">
                 نمونه کارها</h1>
-            <div class="bg-white dark:bg-[#3F3F46] shadow-lg w-full p-9 mt-10 rounded-[20px] grid sm:grid-cols-3 lg:grid-cols-4 grid-cols-2 gap-6">
+            <div
+                class="bg-white dark:bg-[#3F3F46] shadow-lg w-full p-9 mt-10 rounded-[20px] grid sm:grid-cols-3 lg:grid-cols-4 grid-cols-2 gap-6">
                 @foreach($work_samples as $work_sample)
                     <a href="{{ $work_sample->url }}"
                        class="work_sample dark:bg-[#2C2C30] bg-gray-100 p-4 py-6 rounded-[20px] w-full relative inline-block">
                         <img src="{{ asset($work_sample->thumbnail) }}" alt="" class="h-[80px] mx-auto">
                         <p class="text-center mt-4 dark:text-white">{{ $work_sample->description }}</p>
-{{--                        <button class="code bg-green-500 rounded-[8px] z-20 absolute top-4 right-4 py-1 px-1.5">--}}
+                        {{--                        <button class="code bg-green-500 rounded-[8px] z-20 absolute top-4 right-4 py-1 px-1.5">--}}
                         {{--                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"--}}
                         {{--                                 stroke="currentColor" class="w-5 h-5 text-white">--}}
                         {{--                                <path stroke-linecap="round" stroke-linejoin="round"--}}

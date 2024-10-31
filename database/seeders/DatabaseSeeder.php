@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Information;
 use App\Models\Setting;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Skill;
