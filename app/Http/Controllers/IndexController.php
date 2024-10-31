@@ -28,16 +28,16 @@ class IndexController extends Controller
         global $response;
         try {
             $response = Http::get('https://api.github.com/users/mohamadreza1388');
+            global $avatar;
+            if ($response?->successful()) {
+                $avatar = $response->json('avatar_url');
+                Setting::where('key', 'main_picture')->first()->update([
+                    'value' => $avatar,
+                ]);
+            }
         }catch (Exception $e){
-
+            dd($e->getMessage());
         }
-        global $avatar;
-        if ($response?->successful()) {
-            $avatar = $response->json('avatar_url');
-        }
-        Setting::where('key', 'main_picture')->first()->update([
-            'value' => $avatar,
-        ]);
 
         return view('index', compact('skills', 'work_samples'));
     }
