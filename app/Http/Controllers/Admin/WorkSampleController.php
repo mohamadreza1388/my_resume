@@ -15,7 +15,7 @@ class WorkSampleController extends Controller
     {
         $work_samples = WorkSample::all();
 
-       return view('admin.work_samples.index', compact('work_samples'));
+        return view('admin.work_samples.index', compact('work_samples'));
     }
 
     /**
@@ -32,17 +32,17 @@ class WorkSampleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "title" => "string",
-            "description" => "string",
-            "thumbnail" => "string",
-            "url" => "string"
+            'title' => 'string',
+            'description' => 'string',
+            'thumbnail' => 'string',
+            'url' => 'string',
         ]);
 
         WorkSample::create([
-            "title" => $request->title,
-            "description" => $request->description,
-            "thumbnail" => $request->thumbnail,
-            "url" => $request->url
+            'title' => $request->title,
+            'description' => $request->description,
+            'thumbnail' => $request->thumbnail,
+            'url' => $request->url,
         ]);
 
         return redirect()->route('admin.work_samples.index');
@@ -70,17 +70,17 @@ class WorkSampleController extends Controller
     public function update(Request $request, WorkSample $work_sample)
     {
         $request->validate([
-            "title" => "string",
-            "description" => "string",
-            "thumbnail" => "string",
-            "url" => "string"
+            'title' => 'string',
+            'description' => 'string',
+            'thumbnail' => 'string',
+            'url' => 'string',
         ]);
 
         $work_sample->update([
-            "title" => $request->title,
-            "description" => $request->description,
-            "thumbnail" => $request->thumbnail,
-            "url" => $request->url
+            'title' => $request->title,
+            'description' => $request->description,
+            'thumbnail' => $request->thumbnail,
+            'url' => $request->url,
         ]);
 
         return redirect()->route('admin.work_samples.index');

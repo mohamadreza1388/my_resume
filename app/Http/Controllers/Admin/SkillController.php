@@ -32,13 +32,13 @@ class SkillController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-           "title" => "string",
-           "value" => "integer"
+            'title' => 'string',
+            'value' => 'integer',
         ]);
 
         Skill::create([
-            "title" => $request->input('title'),
-            "value" => $request->input('value'),
+            'title' => $request->input('title'),
+            'value' => $request->input('value'),
         ]);
 
         return redirect()->route('admin.skills.index');
@@ -66,13 +66,13 @@ class SkillController extends Controller
     public function update(Request $request, Skill $skill)
     {
         $request->validate([
-            "title" => "string",
-            "value" => "integer"
+            'title' => 'string',
+            'value' => 'integer',
         ]);
 
         $skill->update([
-            "title" => $request->input('title'),
-            "value" => $request->input('value'),
+            'title' => $request->input('title'),
+            'value' => $request->input('value'),
         ]);
 
         return redirect()->route('admin.skills.index');

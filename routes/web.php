@@ -13,7 +13,7 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/clear', function () {
         Artisan::call('cache:clear');
 
-        return response()->json(["status" => "success", "message" => "Cache cleared"]);
+        return response()->json(['status' => 'success', 'message' => 'Cache cleared']);
     });
     Route::get('/setting', [SettingController::class, 'index'])->name('setting');
     Route::post('/setting/set', [SettingController::class, 'set'])->name('setting.set');
@@ -21,4 +21,4 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('work_samples', WorkSampleController::class);
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';
