@@ -110,13 +110,13 @@
                        class="work_sample dark:bg-[#2C2C30] bg-gray-100 p-4 py-6 rounded-[20px] w-full relative inline-block">
                         <img src="{{ asset($work_sample->thumbnail) }}" alt="" class="h-[80px] mx-auto">
                         <p class="text-center mt-4 dark:text-white">{{ $work_sample->description }}</p>
-                        <button class="code bg-green-500 rounded-[8px] z-20 absolute top-4 right-4 py-1 px-1.5">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                 stroke="currentColor" class="w-5 h-5 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
-                            </svg>
-                        </button>
+{{--                        <button class="code bg-green-500 rounded-[8px] z-20 absolute top-4 right-4 py-1 px-1.5">--}}
+{{--                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"--}}
+{{--                                 stroke="currentColor" class="w-5 h-5 text-white">--}}
+{{--                                <path stroke-linecap="round" stroke-linejoin="round"--}}
+{{--                                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>--}}
+{{--                            </svg>--}}
+{{--                        </button>--}}
                         <div
                             class="information w-full max-w-[450px] rounded-[20px] z-[52] fixed min-h-[200px] top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-white dark:bg-[#2C2C30] p-4 hidden opacity-0">
                             <div class="flex justify-between items-center">

@@ -14,7 +14,7 @@
                             ها</a>
                     </li>
                     <li>
-                        <a href="#work-samples"
+                        <a href="{{ route("admin.work_samples.index") }}"
                            class="text-white text-[20px] before:inline-block before:absolute relative before:w-full before:h-[3px] before:bottom-[-4px] before:bg-transparent hover:before:bg-green-500 before:transition-all before:duration-200 before:rounded">نمونه
                             کارها</a>
                     </li>
