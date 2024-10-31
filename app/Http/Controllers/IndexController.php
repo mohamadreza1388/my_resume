@@ -17,19 +17,19 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $skills = Cache::remember('skills', 24 * 60, function () {
-            return Skill::all();
-        });
+        $skills = Skill::all();
 
-        $work_samples = Cache::remember('work_samples', 24 * 60, function () {
-            return WorkSample::all();
-        });
+        $work_samples = WorkSample::all();
 
         global $response;
         try {
-            $response = Http::get('https://api.github.com/users/mohamadreza1388');
+            $token = env("GITHUB_TOKEN");
+
+            $response = Http::withHeaders([
+                'Authorization' => 'token ' . $token,
+            ])->get('https://api.github.com/users/mohamadreza1388');
             global $avatar;
-            if ($response?->successful()) {
+            if ($response->successful()) {
                 $avatar = $response->json('avatar_url');
                 Setting::where('key', 'main_picture')->first()->update([
                     'value' => $avatar,
