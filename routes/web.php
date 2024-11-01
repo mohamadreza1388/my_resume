@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', IndexController::class);
-
+//test
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/clear', function () {
         Artisan::call('cache:clear');
