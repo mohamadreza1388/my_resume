@@ -19,7 +19,6 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             cd ${{ secrets.SERVER_PATH }}
-            git fetch --all
             git pull
             npm i
             composer i

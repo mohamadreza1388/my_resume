@@ -109,7 +109,7 @@
             <h1 class="font-[morabba] font-bold text-[40px] text-[#1F2937] before:inline-block relative before:absolute before:bottom-[-5px] before:w-[50%] before:h-[4px] before:bg-green-500 w-fit dark:text-white">
                 نمونه کارها</h1>
             <div
-                class="bg-white dark:bg-[#3F3F46] shadow-lg w-full p-9 mt-10 rounded-[20px] grid sm:grid-cols-3 lg:grid-cols-4 grid-cols-2 gap-6">
+                class="bg-white dark:bg-[#3F3F46] shadow-lg w-full p-9 mt-10 rounded-[20px] grid sm:grid-cols-3 lg:grid-cols-4 grid-cols-1 gap-6">
                 @foreach($work_samples as $work_sample)
                     <a href="{{ $work_sample->url }}"
                        class="work_sample dark:bg-[#2C2C30] bg-gray-100 p-4 py-6 rounded-[20px] w-full relative inline-block">
