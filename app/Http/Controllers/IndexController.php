@@ -20,23 +20,19 @@ class IndexController extends Controller
 
         $work_samples = WorkSample::all();
 
-        //        global $response;
-        //        try {
-        //            $token = env("GITHUB_TOKEN");
-        //
-        //            $response = Http::withHeaders([
-        //                'Authorization' => 'token ' . $token,
-        //            ])->get('https://api.github.com/users/mohamadreza1388');
-        //            global $avatar;
-        //            if ($response->successful()) {
-        //                $avatar = $response->json('avatar_url');
-        //                Setting::where('key', 'main_picture')->first()->update([
-        //                    'value' => $avatar,
-        //                ]);
-        //            }
-        //        } catch (Exception $e) {
-        //            dd($e->getMessage());
-        //        }
+        global $response;
+        try {
+            $token = env("GITHUB_TOKEN");
+
+            $response = Http::withHeaders(['Authorization' => 'token ' . $token,])->get('https://api.github.com/users/mohamadreza1388');
+            global $avatar;
+            if ($response->successful()) {
+                $avatar = $response->json('avatar_url');
+                Setting::where('key', 'main_picture')->first()->update(['value' => $avatar,]);
+            }
+        } catch (Exception $e) {
+            dd($e->getMessage());
+        }
 
         return view('index', compact('skills', 'work_samples'));
     }
