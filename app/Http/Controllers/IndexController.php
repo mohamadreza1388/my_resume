@@ -26,6 +26,7 @@ class IndexController extends Controller
 
             $response = Http::withHeaders(['Authorization' => 'token ' . $token,])->get('https://api.github.com/users/mohamadreza1388');
             global $avatar;
+
             if ($response->successful()) {
                 $avatar = $response->json('avatar_url');
                 Setting::where('key', 'main_picture')->first()->update(['value' => $avatar,]);
