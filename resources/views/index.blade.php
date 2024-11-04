@@ -113,7 +113,7 @@
                 @foreach($work_samples as $work_sample)
                     <a href="{{ $work_sample->url }}"
                        class="work_sample dark:bg-[#2C2C30] bg-gray-100 p-4 py-6 rounded-[20px] w-full relative inline-block">
-                        <img src="{{ asset($work_sample->thumbnail) }}" alt="" class="h-[80px] mx-auto object-cover max-w-[180px]">
+                        <img src="{{ asset($work_sample->thumbnail) }}" alt="" class="h-[80px] mx-auto object-contain max-w-[180px]">
                         <p class="text-center mt-4 dark:text-white">{{ $work_sample->description }}</p>
                         {{--                        <button class="code bg-green-500 rounded-[8px] z-20 absolute top-4 right-4 py-1 px-1.5">--}}
                         {{--                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"--}}
